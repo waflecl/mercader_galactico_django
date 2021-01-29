@@ -1,0 +1,1 @@
+# mercader_galactico_django
