@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block page_content %}
+<div class="row">
+    <div class="col-md-12">
+        <h2>Respuesta</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h3>Usted ha preguntado :</h3>
+        {% for p in pregunta %}
+        <p>{{p}}</p>
+        {% endfor %}
+    </div>
+    <div class="col-md-6">
+        <h3>Mercader responde :</h3>
+        {% for r in response %}
+        <p>{{r}}</p>
+        {% endfor %}
+    </div>
+</div>
+<a href="/" class="btn btn-primary"> Volver</a> {% endblock %}

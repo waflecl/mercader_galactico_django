@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block page_content %}
+<div class="row">
+    <div class="col-md-12">
+        <h2>Parametrización y consulta</h2>
+    </div>
+    <div class="col-md-12">
+        <form action="/pregunta/" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="aprendizaje">Aprendizaje del Mercader: </label>
+                        <textarea id="aprendizaje" class="form-control" rows="10" cols="10" name="aprendizaje">
+glob is I
+prok is V
+pish is X
+tegj is L
+glob glob Silver is 34 Credits
+glob prok Gold is 57800 Credits
+pish pish Iron is 3910 Credits</textarea>
+                        <small id="aprendizajeHelp" class="form-text text-muted">Este es el parámetro de aprendizaje de la herramienta.</small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="pregunta">Ingrese su (s) Pregunta(s):</label>
+                        <textarea class="form-control" rows="10" cols=20 id="pregunta" name="pregunta">
+how much is pish tegj glob glob ?
+how many Credits is glob prok Silver ?
+how many Credits is glob prok Gold ?
+how many Credits is glob prok Iron ?
+how much wood could a woodchuck chuck if a woodchuck could chuck wood ?</textarea>
+                        <small id="aprendizajeHelp" class="form-text text-muted">Para realizar la pregunta debe separar por renglon (línea).</small>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success"> Enviar Consulta</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
